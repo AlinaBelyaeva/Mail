@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.mail {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.mail_text {
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.mail_img {
+    width: 50px;
+
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    margin: 20px;
+}
+
+.user_img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+.menu-wrapper {
+    width: 200px;
+    height: 100vh;
+    text-transform: capitalize;
+    margin-left: 50px;
+} 
+
+.menu__item:hover {
+    background-color: rgb(245, 231, 247);
+}
+
+.menu__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+}
+
+.menu__img {
+    width: 50px;
+}
+
+.mails {
+    width: calc(100% - 200px);
+}
+
+.mails_item {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.mails_item:hover {
+    background-color: rgb(206, 199, 190);
+}
+
+.mails_usernames {
+    display: flex;
+    width: 200px;
+    padding-left: 10px;
+    gap: 15px;
+    align-items: center;
+}
+
+.mails_message {
+    display: flex;
+    width: calc(100% - 330px);
+    white-space: nowrap;
+}
+
+.mails_text {
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mails_text::before {
+    content:"-" ;
+    color: gray;
+    padding: 0 3px;
+}
+
+.mails_date {
+    display: flex;
+    width: 130px;
+    gap: 15px;
+    padding-right: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mails_item img {
+    width: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .mails_item {
+        flex-direction: column;
+        position: relative;
+    }
+    .mails_message {
+        flex-direction: column;
+        padding-left: 40px;
+        width: calc(100% - 60px);
+    }
+    .mails_text::before {
+        content: "";
+        padding: 0 0;
+    }
+    .mails_date {
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .menu-wrapper span {
+        display: none;
+
+    }
+
+    .menu-wrapper {
+        width: 80px;
+        margin-left: 10px;
+    }
+
+    .mails {
+        width: calc(100% - 80px);
+    }
+
+    .mails_usernames {
+        gap: 5px;
+        width: auto;
+    }
+
+    .mails_message {
+        padding-left: 30px;
+    }
+}
